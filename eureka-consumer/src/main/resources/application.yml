@@ -6,4 +6,11 @@ server:
 
 eureka:
   client:
-    service-url: http://localhost:9000
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
