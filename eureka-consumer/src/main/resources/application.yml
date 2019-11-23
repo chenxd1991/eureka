@@ -14,3 +14,5 @@ feign:
     enabled: false
   okhttp:
     enabled: true
+  hystrix:
+    enabled: true #开启熔断功能
