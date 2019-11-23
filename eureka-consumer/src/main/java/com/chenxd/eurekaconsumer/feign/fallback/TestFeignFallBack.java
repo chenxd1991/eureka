@@ -1,6 +1,7 @@
 package com.chenxd.eurekaconsumer.feign.fallback;
 
 import com.chenxd.eurekaconsumer.feign.TestFeign;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -12,6 +13,7 @@ import java.util.Map;
  * @description
  */
 @Component
+@Slf4j
 public class TestFeignFallBack implements TestFeign {
 
     /**
@@ -22,6 +24,7 @@ public class TestFeignFallBack implements TestFeign {
      */
     @Override
     public String test(String name) {
+        log.info("接口调用失败");
         return "Hello World";
     }
 
@@ -33,6 +36,7 @@ public class TestFeignFallBack implements TestFeign {
      */
     @Override
     public String testForm(Map<String, Object> param) {
+        log.info("接口调用失败");
         return null;
     }
 }
