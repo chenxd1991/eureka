@@ -26,3 +26,4 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 1000 #断路器超时时间，默认1000ms
+

@@ -1,4 +1,4 @@
-package com.chenxd.eurekaconsumer.config;
+package com.chenxd.eurekaconsumer.feign.config;
 
 import feign.Feign;
 import okhttp3.ConnectionPool;
