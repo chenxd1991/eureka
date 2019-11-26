@@ -1,0 +1,15 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: eureka-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启默认配置，所以已经注册的服务都可以通过网管进行访问。方法方式：http://网关地址/服务名称(大写)/** （注：默认情况下服务名称必须大写）
+          lower-case-service-id: true # 配置服务名称支持小写
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
